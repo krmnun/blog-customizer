@@ -1,14 +1,10 @@
-import { createRoot } from 'react-dom/client';
-import { StrictMode, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import { ArrowButton } from 'src/ui/arrow-button/ArrowButton';
 import { Article } from './components/article/Article';
-import ArticleParamsForm from './components/article-params-form';
+import ArticleParamsForm from './components/article-params-form'; // Using barrel file
 import { defaultArticleState, ArticleStateType } from 'src/constants/articleProps';
-import styles from './styles/index.module.scss';
-
-const domNode = document.getElementById('root') as HTMLDivElement;
-const root = createRoot(domNode);
+import styles from './App.module.scss';
 
 const App = () => {
   const [articleState, setArticleState] = useState<ArticleStateType>(defaultArticleState);
@@ -27,16 +23,6 @@ const App = () => {
     setIsSidebarOpen((prev) => !prev);
   };
 
-  const handleApply = (newState: ArticleStateType) => {
-    setArticleState(newState);
-    setIsSidebarOpen(false);
-  };
-
-  const handleReset = () => {
-    setArticleState(defaultArticleState);
-    setIsSidebarOpen(false);
-  };
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const sidebar = document.querySelector(`.${styles.container}`);
@@ -48,17 +34,18 @@ const App = () => {
     return () => document.removeEventListener('click', handleClickOutside);
   }, [isSidebarOpen]);
 
+  const handleApply = (newState: ArticleStateType) => {
+    setArticleState(newState);
+    setIsSidebarOpen(false);
+  };
+
+  const handleReset = () => {
+    setArticleState(defaultArticleState);
+    setIsSidebarOpen(false);
+  };
+
   return (
-    <main
-      className={clsx(styles.main)}
-      style={{
-        '--font-family': articleState.fontFamilyOption.value,
-        '--font-size': articleState.fontSizeOption.value,
-        '--font-color': articleState.fontColor.value,
-        '--container-width': articleState.contentWidth.value,
-        '--bg-color': articleState.backgroundColor.value,
-      } as React.CSSProperties}
-    >
+    <main className={clsx(styles.main)}>
       <ArrowButton isOpen={isSidebarOpen} onClick={handleToggleSidebar} />
       <ArticleParamsForm
         initialState={articleState}
@@ -71,8 +58,4 @@ const App = () => {
   );
 };
 
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+export default App;

@@ -18,6 +18,7 @@ type SelectProps = {
 	onChange?: (selected: OptionType) => void;
 	onClose?: () => void;
 	title?: string;
+    label?: string;
 };
 
 export const Select = (props: SelectProps) => {
