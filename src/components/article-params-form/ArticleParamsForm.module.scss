@@ -16,14 +16,14 @@
 	display: flex;
 	flex-shrink: 0;
 	flex-direction: column;
+	gap: 50px;
 	box-sizing: border-box;
 	width: 616px;
 	height: auto;
 	min-height: 100%;
-	padding: 50px 31px;
+	padding: 20px;
 	background-color: #ffffff;
 	border-right: 1px solid #000000;
-	gap: 50px;
 }
 
 .bottomContainer {
@@ -33,13 +33,19 @@
 }
 
 .formContent {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  flex-grow: 1;
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	gap: 50px;
 }
 
-.sizeOptions {
-  display: flex;
-  gap: 10px;
+.formGroup {
+	margin-bottom: 1rem;
+}
+
+h2 {
+	margin-bottom: 20px;
+	font-weight: 800;
+	font-size: 20px;
+	text-align: center;
 }

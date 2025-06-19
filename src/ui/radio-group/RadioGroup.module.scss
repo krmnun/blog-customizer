@@ -1,5 +1,5 @@
 .group {
-	display: inline-flex;
+	display: flex;
 	box-sizing: border-box;
 	max-width: fit-content;
 	border: 1px solid #000000;
@@ -7,7 +7,7 @@
 
 .item {
 	position: relative;
-	display: block;
+	display: flex;
 }
 
 .input {
@@ -19,35 +19,42 @@
 	opacity: 0;
 }
 
+.title {
+	margin-right: 10px;
+	padding-top: 5px;
+	font-weight: 800;
+	font-size: 12px;
+	white-space: nowrap;
+	text-transform: uppercase;
+}
+
 .label {
 	display: flex;
 	flex-shrink: 0;
 	justify-content: center;
 	align-items: center;
 	box-sizing: border-box;
-	width: 124px;
+	width: 123px;
 	height: 35px;
+	font-size: 14px;
 	text-align: center;
 	border-right: 1px solid #000000;
 	cursor: pointer;
+	transition: background-color 0.3s;
 }
-
-/* Убираем бордер у последнего в radiogroup, чтобы не было двойного бордера */
 
 .label:hover {
 	background-color: #ffedab;
 }
 
-.item[data-checked='true'] .label {
-	background: var(--gold, #ffc802);
+.selected {
+	background-color: #ffd700;
+	border-color: #ffd700;
+	outline: 2px solid #6a0dad;
 }
 
 .item:last-child .label {
-	border: none;
-}
-
-.item[data-checked='true'] .label:hover {
-	background: var(--gold, #ffc802);
+	border-right: none;
 }
 
 .container {
