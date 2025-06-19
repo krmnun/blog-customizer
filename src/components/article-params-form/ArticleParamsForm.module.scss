@@ -1,51 +1,51 @@
 .container {
-  position: fixed;
-  left: 0;
-  width: 616px;
-  height: 100%;
-  overflow: scroll;
-  transform: translate(-616px);
-  transition: transform 0.5s ease;
+	position: fixed;
+	left: 0;
+	width: 616px;
+	height: 100%;
+	overflow: scroll;
+	transform: translate(-616px);
+	transition: transform 0.5s ease;
 }
 
 .container_open {
-  transform: translate(0);
+	transform: translate(0);
 }
 
 .form {
-  display: flex;
-  flex-shrink: 0;
-  flex-direction: column;
-  box-sizing: border-box;
-  width: 616px;
-  height: auto;
-  min-height: 100%;
-  padding: 20px;
-  background-color: #ffffff;
-  border-right: 1px solid #000000;
-  gap: 50px;
+	display: flex;
+	flex-shrink: 0;
+	flex-direction: column;
+	gap: 50px;
+	box-sizing: border-box;
+	width: 616px;
+	height: auto;
+	min-height: 100%;
+	padding: 20px;
+	background-color: #ffffff;
+	border-right: 1px solid #000000;
 }
 
 .bottomContainer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: auto;
+	display: flex;
+	justify-content: space-between;
+	margin-top: auto;
 }
 
 .formContent {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  flex-grow: 1;
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	gap: 50px;
 }
 
 .formGroup {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 20px;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 20px;
+	margin-bottom: 20px;
+	font-weight: 800;
+	font-size: 20px;
+	text-align: center;
 }

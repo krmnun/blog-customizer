@@ -1,64 +1,64 @@
 .group {
-  display: flex;
-  box-sizing: border-box;
-  max-width: fit-content;
-  border: 1px solid #000000;
+	display: flex;
+	box-sizing: border-box;
+	max-width: fit-content;
+	border: 1px solid #000000;
 }
 
 .item {
-  position: relative;
-  display: flex;
+	position: relative;
+	display: flex;
 }
 
 .input {
-  position: absolute;
-  width: 0;
-  height: 0;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
+	position: absolute;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	opacity: 0;
 }
 
 .title {
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin-right: 10px;
-  white-space: nowrap;
-  padding-top: 5px;
+	margin-right: 10px;
+	padding-top: 5px;
+	font-weight: 800;
+	font-size: 12px;
+	white-space: nowrap;
+	text-transform: uppercase;
 }
 
 .label {
-  display: flex;
-  flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  width: 123px;
-  height: 35px;
-  text-align: center;
-  border-right: 1px solid #000000;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s;
+	display: flex;
+	flex-shrink: 0;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	width: 123px;
+	height: 35px;
+	font-size: 14px;
+	text-align: center;
+	border-right: 1px solid #000000;
+	cursor: pointer;
+	transition: background-color 0.3s;
 }
 
 .label:hover {
-  background-color: #ffedab;
+	background-color: #ffedab;
 }
 
 .selected {
-  background-color: #ffd700;
-  outline: 2px solid #6a0dad;
-  border-color: #ffd700;
+	background-color: #ffd700;
+	border-color: #ffd700;
+	outline: 2px solid #6a0dad;
 }
 
 .item:last-child .label {
-  border-right: none;
+	border-right: none;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  row-gap: 4px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 4px;
 }
