@@ -56,8 +56,6 @@ export const backgroundColors: OptionType[] = [
 export const contentWidthArr: OptionType[] = [
   { label: 'Широкий', title: 'Широкий', value: '1394px', className: 'width-wide', optionClassName: 'option-wide' },
   { label: 'Узкий', title: 'Узкий', value: '948px', className: 'width-narrow', optionClassName: 'option-narrow' },
-  { label: 'Широкий', title: 'Ширина широкая', value: '1394px', className: 'width-wide', optionClassName: 'option-wide' },
-  { label: 'Узкий', title: 'Ширина узкая', value: '949px', className: 'width-narrow', optionClassName: 'option-narrow' },
 ];
 
 export const fontSizeOptions: OptionType[] = [

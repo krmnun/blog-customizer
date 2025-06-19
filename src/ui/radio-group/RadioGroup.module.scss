@@ -1,57 +1,64 @@
 .group {
-	display: inline-flex;
-	box-sizing: border-box;
-	max-width: fit-content;
-	border: 1px solid #000000;
+  display: flex;
+  box-sizing: border-box;
+  max-width: fit-content;
+  border: 1px solid #000000;
 }
 
 .item {
-	position: relative;
-	display: block;
+  position: relative;
+  display: flex;
 }
 
 .input {
-	position: absolute;
-	width: 0;
-	height: 0;
-	margin: 0;
-	padding: 0;
-	opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-right: 10px;
+  white-space: nowrap;
+  padding-top: 5px;
 }
 
 .label {
-	display: flex;
-	flex-shrink: 0;
-	justify-content: center;
-	align-items: center;
-	box-sizing: border-box;
-	width: 124px;
-	height: 35px;
-	text-align: center;
-	border-right: 1px solid #000000;
-	cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 123px;
+  height: 35px;
+  text-align: center;
+  border-right: 1px solid #000000;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
 }
-
-/* Убираем бордер у последнего в radiogroup, чтобы не было двойного бордера */
 
 .label:hover {
-	background-color: #ffedab;
+  background-color: #ffedab;
 }
 
-.item[data-checked='true'] .label {
-	background: var(--gold, #ffc802);
+.selected {
+  background-color: #ffd700;
+  outline: 2px solid #6a0dad;
+  border-color: #ffd700;
 }
 
 .item:last-child .label {
-	border: none;
-}
-
-.item[data-checked='true'] .label:hover {
-	background: var(--gold, #ffc802);
+  border-right: none;
 }
 
 .container {
-	display: flex;
-	flex-direction: column;
-	row-gap: 4px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
 }
